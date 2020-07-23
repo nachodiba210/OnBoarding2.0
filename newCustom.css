@@ -10484,6 +10484,10 @@ h3 {
   height: 80px;
   border: solid 1px #707070;
 }
+.box-border .fifth {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  border: solid 1px #d2d2d2;
+}
 
 .box-margin {
   padding: 10px;
