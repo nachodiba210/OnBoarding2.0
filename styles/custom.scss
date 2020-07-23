@@ -1,0 +1,62 @@
+$theme-colors: (
+  primary: #fcae00,
+  secondary: #5853bc,
+  tertiary: #11afaf,
+  quaternary: #707070,
+  "gray": #6c757d,
+  "light-gray": #f0f0f0,
+) !default;
+
+$font-family-base: "Nunito";
+$font-weight-normal: 600;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+.font-bitter {
+  font-family: Bitter;
+}
+
+.background-gradient {
+  background-image: linear-gradient(106deg, #11afaf 0%, #5853bc 104%);
+}
+
+.box-border {
+
+  .first {
+    border-radius: 10px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    border: solid 1px #665eff;
+  }
+
+  .second {
+    border-radius: 10px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    border: solid 1px #d2d2d2;
+  }
+
+  .third {
+    border-radius: 50px;
+    border: solid 1px #d2d2d2;
+  }
+
+  .fourth {
+    width: 80px;
+    height: 80px;
+    border: solid 1px #707070;
+  }
+
+}
+
+.box-margin {
+  padding: 10px;
+  margin: 10px;
+}
+
+.button-custom {
+  width: 400px;
+}
+
+
+
+
+
