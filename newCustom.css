@@ -61,7 +61,7 @@ body {
   margin: 0;
   font-family: "Nunito";
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.5;
   color: #212529;
   text-align: left;
@@ -424,7 +424,7 @@ hr {
 small,
 .small {
   font-size: 80%;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 mark,
@@ -2072,7 +2072,7 @@ pre code {
   height: calc(1.5em + 0.75rem + 2px);
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.5;
   color: #495057;
   background-color: #fff;
@@ -2487,7 +2487,7 @@ textarea.form-control {
 
 .btn {
   display: inline-block;
-  font-weight: 600;
+  font-weight: 500;
   color: #212529;
   text-align: center;
   vertical-align: middle;
@@ -3185,7 +3185,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-link {
-  font-weight: 600;
+  font-weight: 500;
   color: #fcae00;
   text-decoration: none;
 }
@@ -3448,7 +3448,7 @@ input[type=button].btn-block {
   width: 100%;
   padding: 0.25rem 1.5rem;
   clear: both;
-  font-weight: 600;
+  font-weight: 500;
   color: #212529;
   text-align: inherit;
   white-space: nowrap;
@@ -3694,7 +3694,7 @@ input[type=button].btn-block {
   padding: 0.375rem 0.75rem;
   margin-bottom: 0;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.5;
   color: #495057;
   text-align: center;
@@ -3905,7 +3905,7 @@ input[type=button].btn-block {
   height: calc(1.5em + 0.75rem + 2px);
   padding: 0.375rem 1.75rem 0.375rem 0.75rem;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.5;
   color: #495057;
   vertical-align: middle;
@@ -3994,7 +3994,7 @@ input[type=button].btn-block {
   z-index: 1;
   height: calc(1.5em + 0.75rem + 2px);
   padding: 0.375rem 0.75rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.5;
   color: #495057;
   background-color: #fff;
@@ -5989,7 +5989,7 @@ a.close.disabled {
   margin: 0;
   font-family: "Nunito";
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.5;
   text-align: left;
   text-align: start;
@@ -6091,7 +6091,7 @@ a.close.disabled {
   max-width: 276px;
   font-family: "Nunito";
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.5;
   text-align: left;
   text-align: start;
@@ -10204,7 +10204,7 @@ button.bg-light-gray:focus {
 }
 
 .font-weight-normal {
-  font-weight: 600 !important;
+  font-weight: 500 !important;
 }
 
 .font-weight-bold {
@@ -10465,37 +10465,19 @@ h3 {
   background-image: linear-gradient(106deg, #11afaf 0%, #5853bc 104%);
 }
 
-.box-border .first {
-  border-radius: 10px;
+.box-border .box-shadow {
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+}
+.box-border .first-color-border {
   border: solid 1px #665eff;
 }
-.box-border .second {
-  border-radius: 10px;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+.box-border .second-color-border {
   border: solid 1px #d2d2d2;
 }
-.box-border .third {
-  border-radius: 50px;
-  border: solid 1px #d2d2d2;
-}
-.box-border .fourth {
+.box-border .circle-radius {
   width: 80px;
   height: 80px;
   border: solid 1px #707070;
-}
-.box-border .fifth {
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-  border: solid 1px #d2d2d2;
-}
-
-.box-margin {
-  padding: 10px;
-  margin: 10px;
-}
-
-.button-custom {
-  width: 400px;
 }
 
 /*# sourceMappingURL=newCustom.css.map */
