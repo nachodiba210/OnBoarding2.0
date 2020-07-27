@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="newCustom.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@700&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body class="bg-primary">
+
+  <!-- TITLE AND BUDGET -->
+  <div class="container-fluid p-5">
+    <h1 class="text-white">Js recruting test</h1>
+    <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fugiat vero dignissimos
+      maxime reiciendis. Incidunt, nulla expedita. Ad, aperiam numquam.</p>
+
+    <h3 class="text-white" id="budget">Budet: $2250</h3>
+  </div>
+
+
+  <!-- TABLE -->
+  <div class="w-50 px-5">
+    <table class="table table-borderless text-white mx-auto border-color-blue" id="myTable">
+      <thead>
+        <tr class="bg-secondary">
+          <th>Wishlist</th>
+          <th>Cost</th>
+          <th>Completed?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Ruby Metaprogramming Book</td>
+          <td>$500</td>
+          <td><input type="checkbox" class="form-check-input mx-auto"></td>
+        </tr>
+        <tr>
+          <td>MacBook Pro</td>
+          <td>$1300</td>
+          <td><input type="checkbox" class="form-check-input mx-auto"></td>
+        </tr>
+        <tr>
+          <td>Electric Bike</td>
+          <td>$670</td>
+          <td><input type="checkbox" class="form-check-input mx-auto"></td>
+        </tr>
+        <tr>
+          <td>Sennheiser Headphones</td>
+          <td>$180</td>
+          <td><input type="checkbox" class="form-check-input mx-auto"></td>
+        </tr>
+        <tr>
+          <td>home Brew Beer Kit</td>
+          <td>$320</td>
+          <td><input type="checkbox" class="form-check-input mx-auto"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ADD AND OPTIMIZE BUTTON -->
+  <div class="px-5">
+    <button type="button" id="add-button" class="btn-lg btn-light text-white bg-primary mr-2">A D D</button>
+    <button type="button" id="optimize-button" class="btn btn-primary text-primary bg-white mt-2">OPTIMIZE</button>
+  </div>
+
+
+  <!-- POPUP CREATE ITEM -->
+  <div class="container p-3 bg-secondary w-25 d-none position-realitve" id="newItemPopUp">
+    <h1 class="text-white m-y">New Item</h1>
+    <form action="/action_page.php">
+      <label for="fname" class="my-n1 text-white">Name:</label><br>
+      <input type="text" id="fname" name="fname"><br><br>
+      <label for="lname" class="my-n1 text-white">Cost:</label><br>
+      <input type="number" id="cost" name="lname"><br><br>
+      <input class="px-3 text-white" id="create-button" type="button" value="CREATE">
+    </form>
+  </div>
+
+  <!-- JS script import -->
+  <script src="index.js"></script>
+
+</body>
+
+</html>
