@@ -10457,5 +10457,12 @@ h3 {
     border-color: #dee2e6;
   }
 }
+.modal-costume {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.modal-costume .modal-content-costume {
+  top: 35%;
+  left: 35%;
+}
 
 /*# sourceMappingURL=newCustom.css.map */

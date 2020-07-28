@@ -13,6 +13,15 @@ $font-weight-normal: 500;
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 
+.modal-costume {
+  background-color: rgba(0,0,0,0.3);
+
+  .modal-content-costume {
+    top: 35%;
+    left: 35%;
+  }
+
+}
 
 
 

@@ -1,4 +1,4 @@
-let modal = document.getElementById("newItemPopUp");
+let modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
 let btnAdd = document.getElementById("add-button");
@@ -13,8 +13,7 @@ let create = document.getElementById("create-button");
 
 // When the user clicks the button, open the modal
 btnAdd.onclick = function showPopUp() {
-  modal.classList.remove('d-none');
-  modal.classList.add('d-block');
+  modal.classList.add("d-block");
 }
 
 
@@ -71,8 +70,7 @@ create.onclick = function createNewItem() {
   nameCell.innerHTML = name;
   costCell.innerHTML = ('$' + cost);
   checkBoxCell.append(checkBox);
-  modal.classList.add('d-none');
-  modal.classList.remove('d-block');
+  modal.classList.remove("d-block");
 }
 
 // function that is hable to sort the rows of a table using the cost column
