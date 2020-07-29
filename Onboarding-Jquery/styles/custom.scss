@@ -1,0 +1,29 @@
+$theme-colors: (
+  primary: #24c2f1e8,
+  secondary: rgb(52, 201, 52),
+  tertiary: rgb(19, 224, 19),
+  quaternary: #707070,
+  "gray": #6c757d,
+  "light-gray": #f0f0f0,
+) !default;
+
+$font-family-base: "Nunito";
+$font-weight-normal: 500;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+.modal-costume {
+  background-color: rgba(0,0,0,0.3);
+
+  .modal-content-costume {
+    top: 35%;
+    left: 35%;
+  }
+
+}
+
+
+
+
+
