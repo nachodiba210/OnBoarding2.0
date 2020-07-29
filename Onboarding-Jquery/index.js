@@ -14,11 +14,10 @@ $('#myModal').click(function (event){
 // Optimize Button on click function gets the best deal for your budget!!
 $("#optimize-button").click(function optimizerTable() {
   let budget = parseFloat(($('#budget').text()));
-  let rowLength = 0;
   let tbody = $('#myTable tbody');
-  $("#myTable tbody tr").each(function () { rowLength++ });
   sortTable();
   $("#myTable tbody tr").each(function () {
+    $(this).find('input').prop('checked', false);
     let costRow = $(this).find('td:nth-child(2)').text().substr(1);
     let budgetLessCost = budget - costRow;
     if (budgetLessCost >= 0) {
@@ -34,10 +33,9 @@ $("#create-button").click(function createNewItem() {
   // Find a <table> element with id="myTable"
   let name = $("#fname").val();
   let cost = $("#cost").val();
-  console.log(name);
-  console.log(cost);
 
-  $("#myTable").find('tbody')
+  if(name != '' && cost != ''){
+    $("#myTable").find('tbody')
     .append($('<tr>')
       .append($('<td>')
         .text(name)
@@ -52,6 +50,7 @@ $("#create-button").click(function createNewItem() {
         }))
       )
     );
+  }
   $("#myModal").removeClass("d-block");
 });
 

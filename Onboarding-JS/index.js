@@ -33,6 +33,7 @@ function optimizerDeal() {
   sortTable();
   // goes through all the elements and start checking the elements you got to buy
   for (let i = rowLength; i >= 1; i--) {
+    rows[i].cells[2].childNodes[0].checked = false;
     let costRow = parseInt((rows[i].cells[1].innerHTML).substr(1), 10);
     let budgetLessCost = budget-costRow;
     if (budgetLessCost >= 0) {
@@ -48,18 +49,20 @@ function createNewItem() {
   // Find a <table> element with id="myTable"
   let name = document.getElementById("fname").value;
   let cost = document.getElementById("cost").value;
-  let checkBox = document.createElement("input");
-  checkBox.setAttribute("type", "checkbox");
-  checkBox.setAttribute("class", "form-check-input mx-auto");
+  if(name != '' && cost != ''){
+    let checkBox = document.createElement("input");
+    checkBox.setAttribute("type", "checkbox");
+    checkBox.setAttribute("class", "form-check-input mx-auto");
 
-  let row = table.insertRow(-1);
-  let nameCell = row.insertCell(0);
-  let costCell = row.insertCell(1);
-  let checkBoxCell = row.insertCell(2);
+    let row = table.insertRow(-1);
+    let nameCell = row.insertCell(0);
+    let costCell = row.insertCell(1);
+    let checkBoxCell = row.insertCell(2);
 
-  nameCell.innerHTML = name;
-  costCell.innerHTML = ('$' + cost);
-  checkBoxCell.append(checkBox);
+    nameCell.innerHTML = name;
+    costCell.innerHTML = ('$' + cost);
+    checkBoxCell.append(checkBox);
+  }
   modal.classList.toggle("d-block");
 }
 
