@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="newCustom.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@700&display=swap" rel="stylesheet">
+
+
+  <title>Whishlist Platform</title>
+</head>
+
+<body class="bg-primary">
+
+  <!-- TITLE AND BUDGET -->
+  <div class="container-fluid p-5">
+    <h1 class="text-white">Js recruting test</h1>
+    <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fugiat vero dignissimos
+      maxime reiciendis. Incidunt, nulla expedita. Ad, aperiam numquam.</p>
+
+    <h3 class="text-white">Budet: $<%= $budget %></h3>
+  </div>
+
+
+  <!-- TABLE -->
+  <div class="w-50 px-5">
+    <table class="table table-borderless text-white mx-auto border-color-blue" id="myTable">
+      <thead>
+        <tr class="bg-secondary">
+          <th>Wishlist</th>
+          <th>Cost</th>
+          <th>Completed?</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% $wish_list_items.each do |n| %>
+        <tr>
+          <td><%=n.name%></td>
+          <td><%=n.cost%></td>
+          <td><input type="checkbox" class="form-check-input mx-auto" <%= 'checked' if n.check == '1' %> ></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ADD AND OPTIMIZE BUTTON -->
+  <div class="px-5">
+    <form action='/optimizer' method='post'>
+      <button type="button" id="add-button" class="btn-lg btn-light text-white bg-primary mr-2 open-modal">A D D</button>
+      <input type="submit" class="btn btn-primary text-primary bg-white mt-2" value='OPTIMIZER'>
+      <input type="hidden" name='username' value=<%= params[:username] %>>
+    </form>
+    <form action='/reset' method='post'>
+      <input type="submit" class="btn btn-primary text-primary bg-white mt-2" value='RESET'>
+      <input type="hidden" name='username' value=<%= params[:username] %>>
+    </form>
+  </div>
+
+
+  <!-- POPUP CREATE ITEM -->
+  <div class="modal modal-costume" id="myModal">
+    <div class="modal-content modal-sm modal-content-costume bg-secondary py-5 px-3">
+        <h1 class="text-white m-y">New Item</h1>
+          <form action="/create_items" class="text-white" method='post'>
+            <label for="fname" class="my-n1 text-white">Name:</label><br>
+            <input type="text" id="fname" name='name'><br><br>
+            <label for="lname" class="my-n1 text-white">Cost:</label><br>
+            <input type="number" id="cost" name='cost'>
+            <input type="hidden" name='username' value=<%= params[:username] %>><br><br>
+            <input class="px-3 text-primary bg-white btn-light" id="create-button" type="submit" value="CREATE">
+          </form>
+    </div>
+
+  </div>
+
+  <div class="container-fluid pr-5">
+    <form action='/back' method='post'>
+      <input type="submit" class="btn btn-primary text-primary bg-white mt-2 float-right" value='BACK'>
+    </form>
+  </div>
+
+  <!-- JS script import -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="index.js"></script>
+
+</body>
+
+</html>
