@@ -22,8 +22,21 @@ end
 
 #search input
 post '/search' do
-  $username = params[:username]
   redirect "/wishlist?username=" + params[:username]
+end
+
+post '/create_user' do
+  begin
+    con = PG.connect :dbname => 'wish_list_factory'
+    user_id =  con.exec "SELECT count(user_id) FROM users"
+    user_id = user_id.values.first.first.to_i
+    con.exec "INSERT INTO users VALUES(#{user_id+1},'#{params[:create_user]}')"
+  rescue PG::Error => e
+    puts e.message
+  ensure
+    con.close if con
+  end
+  redirect '/username'
 end
 
 
@@ -89,10 +102,13 @@ post '/create_items' do
   begin
     con = PG.connect :dbname => 'wish_list_factory'
     user_id =  con.exec "SELECT user_id FROM users WHERE username = '#{params[:username]}'"
-    user_id = user_id.values.first.first.to_i
-    id_item = con.exec "SELECT count(item_name) FROM users INNER JOIN wish_list_items ON wish_list_items.user_id = users.user_id WHERE username = '#{params[:username]}'"
-    id_item = id_item.values.first.first.to_i
-    con.exec "INSERT INTO wish_list_items (item_id, item_name, item_costs, user_id) VALUES(#{id_item + 1},'#{@name}','#{@cost}',#{user_id})"
+    user_id = user_id.values
+    if user_id != []
+      user_id = user_id.first.first.to_i
+      id_item = con.exec "SELECT count(item_name) FROM users INNER JOIN wish_list_items ON wish_list_items.user_id = users.user_id WHERE username = '#{params[:username]}'"
+      id_item = id_item.values.first.first.to_i
+      con.exec "INSERT INTO wish_list_items (item_id, item_name, item_costs, user_id) VALUES(#{id_item + 1},'#{@name}','#{@cost}',#{user_id})"
+    end
 
   rescue PG::Error => e
     puts e.message

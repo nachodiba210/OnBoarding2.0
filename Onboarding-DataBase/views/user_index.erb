@@ -22,11 +22,21 @@
   </div>
 
   <div class="container">
-    <form action="/search" class="text-white" method="post">
-      <label for="fname" class="my-n1 text-white">username:</label><br>
-      <input type="text" id="username" name="username" class="mb-3"><br>
-      <input class="px-4 text-primary bg-white btn-light" type="submit" value="SEARCH">
-    </form>
+    <div class="row">
+      <div class="col">
+        <form action="/search" class="text-white" method="post">
+          <label for="fname" class="my-n1 text-white">username:</label><br>
+          <input type="text" id="username" name="username" class="mb-3"><br>
+          <input class="px-4 text-primary bg-white btn-light" type="submit" value="SEARCH">
+        </form>
+      </div>
+      <div class="col">
+        <form action="/create_user" class="text-white" method="post">
+          <label for="fname" class="my-n1 text-white">Put the username you want to create:</label><br>
+          <input type="text" id="create_user" name="create_user" class="mb-3"><br>
+          <input class="px-4 text-primary bg-white btn-light" type="submit" value="CREATE">
+        </form>
+      </div>
   </div>
 
 
