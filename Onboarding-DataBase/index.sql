@@ -32,3 +32,10 @@ INNER JOIN
   GROUP BY users.id
 ) q2
 ON q1.id = q2.id;
+
+
+
+git rebase master bugfix
+git rebase bugfix side
+git rebase side another
+git rebase another master
